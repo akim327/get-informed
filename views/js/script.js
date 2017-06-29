@@ -81,3 +81,14 @@ function getSearchBillz(){
     
     .catch(err => console.log(err))
 }
+
+// function partyPicker (str){
+//     if(str === 'R'){
+//         var lol = document.getElementById("party");
+//         lol.setAttribute("value", "PARTY: REPUBLICAN")
+//     }
+//     else{
+//         var lol = document.getElementById("party");
+//         lol.setAttribute("value", "PARTY: DEMOCRAT")
+//     }
+// }

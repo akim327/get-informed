@@ -1,35 +1,38 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>get those billz u kare about</title> 
+        <title>get ur billz</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-        <link href = "css/style.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="/css/homeStyle.css">
     </head>
-    
     <body>
-        <!-- As a heading -->
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#">get informed yo</a>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Features</a>
-                <a class="nav-item nav-link" href="#">Pricing</a>
-                <a class="nav-item nav-link disabled" href="#">Disabled</a>
-                </div>
-            </div>
-        </nav>
+        <!--navbar-->
+        <nav>
+          <div class="white black-text nav-wrapper ">
+            <a href="home.ejs" class="black-text brand-logo">get informed, yo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a class="black-text" href="/">Home</a></li>
+              <li><a class="black-text" href="/get-billz">Find Billz</a></li>
+              <li><a class="black-text" href="/about">About Us</a></li>
+              <li><a class="black-text" href="/getInvolved">Get Involved</a></li>
+              <li><a class="black-text" href="/resources">Resources</a></li>
+              <li><a class="black-text" href="/findReps">Find Reps</a></li>
+            </ul>
+          </div>
+        </nav>  
         
         <br>
         
         <div class='container text-center' id="mainser" >
-            <h1>Get ur billlllllllllls</h1>
+            <h1>GET YOUR BILLZ</h1>
             <form action="/bill" method="post">
                 <input name="search" id="search"/>
                 <button type="submit" class="btn btn-outline-info" onclick={getSearchBillz()}>get billz</button>
@@ -51,7 +54,7 @@
                     <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
                     <form action="/single-bill" method="post">
                         <input value="<%= bill.bill_uri %>" name="bill_uri" style="display: none; visibility: hidden !important" />
-                        <button class="btn btn-primary" type="submit">Get Info on Bill</button>
+                        <button class="btn btn-primary" type="submit">See More</button>
                     </form>
                   </div>
                  

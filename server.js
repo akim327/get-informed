@@ -26,8 +26,10 @@ app.use(bodyParser.urlencoded({ extended: false}))
 app.set('views', __dirname + '/views')
 
 app.get('/', function(request, response){
-    response.render('bill.ejs')
+    response.render('home.ejs')
 })
+
+
 
 app.post('/bill', function(request, response){
     var str = request.body.search
@@ -43,16 +45,23 @@ app.post('/bill', function(request, response){
     })
     .then(res => { return res.data.results })
     .then(json => {
-        console.log(Object.keys(json))
-        appState.bills.push(json)
+        // console.log(json)
         
         response.render('results.ejs', {bills: json})
     })
     .catch(err => console.log(err))
 })
 
-app.get('/congress', function(request,response){
-    response.render('congress.ejs')
+app.get('/get-billz', function(request,response){
+    response.render('bill.ejs')
+})
+
+app.get('/getInvolved', function(request, response){
+    response.render('getInvolved.ejs');
+})
+
+app.get('/findReps', function(request, response){
+    response.render('findReps.ejs');
 })
 
 app.post('/single-bill', function(request, response){
@@ -69,9 +78,13 @@ app.post('/single-bill', function(request, response){
     })
     // .then(res => { return res.data.results })
     .then(res => {
-        var stuffIWant = res.data.results
-        console.log(stuffIWant)
-        response.render('singleBill.ejs', {data: stuffIWant})
+        var stuffIWant = res.data
+        if (!stuffIWant.results) {
+            console.log('res.data is ' + stuffIWant)
+            response.render('singleBill.ejs', {singleData: stuffIWant, data: null})
+        }
+        console.log(Object.keys(stuffIWant.results[0]))
+        response.render('singleBill.ejs', {singleData: null, data: stuffIWant.results[0]})
     })
     .catch(err => console.log(err))    
 })
@@ -80,7 +93,7 @@ app.post('/single-bill', function(request, response){
 //     response.render('other.ejs')
 // })
 
-var port = process.env.PORT || 8080
+var port = process.env.PORT || 8080;
 
 app.listen(port, function(){
     console.log('App running on port ' + port)

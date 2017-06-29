@@ -7,27 +7,27 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="/css/homeStyle.css">
     </head>
     <body>
         <!--navbar-->
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#">get informed, yo</a>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav align-items-end">
-              <a class="nav-item nav-link active mr-auto" href="home.html">Home <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link active mr-auto" href="#">Find Billz <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link active mr-auto" href="#">About Us <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link active mr-auto" href="#">Get Involved <span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link active mr-auto" href="findReps.html">Find Your Repz<span class="sr-only">(current)</span></a>
-              <a class="nav-item nav-link active mr-auto" href="#">Resources<span class="sr-only">(current)</span></a>
-            </div>
+        <nav>
+          <div class="white black-text nav-wrapper ">
+            <a href="home.ejs" class="black-text brand-logo">get informed, yo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a class="black-text" href="/">Home</a></li>
+              <li><a class="black-text" href="/get-billz">Find Billz</a></li>
+              <li><a class="black-text" href="/about">About Us</a></li>
+              <li><a class="black-text" href="/getInvolved">Get Involved</a></li>
+              <li><a class="black-text" href="/resources">Resources</a></li>
+              <li><a class="black-text" href="/findReps">Find Reps</a></li>
+            </ul>
           </div>
-          </nav>
+        </nav>  
           
           <br>
           <!--list-->

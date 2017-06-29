@@ -1,3 +1,91 @@
-<h1>Single Bill</h1>
+<!DOCTYPE HTML>
 
-<%= JSON.stringify(data, undefined, 2) %>
+<html>
+    <head>
+        <title>something you care about</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
+        <link rel="stylesheet" href="/css/homeStyle.css">
+    </head>
+    
+    <body>
+        <!--navbar-->
+        <nav>
+          <div class="white black-text nav-wrapper ">
+            <a href="home.ejs" class="black-text brand-logo">get informed, yo</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a class="black-text" href="/">Home</a></li>
+              <li><a class="black-text" href="/get-billz">Find Billz</a></li>
+              <li><a class="black-text" href="/about">About Us</a></li>
+              <li><a class="black-text" href="/getInvolved">Get Involved</a></li>
+              <li><a class="black-text" href="/resources">Resources</a></li>
+              <li><a class="black-text" href="/findReps">Find Reps</a></li>
+            </ul>
+          </div>
+        </nav>  
+        
+        <% if (data === null) { %>
+          <% console.log('singleData:' + singleData)%>
+          <div class="container billContent">
+            <h1><%=singleData.number%>: <%=singleData.title%></h1>
+            
+            <div id="rect"></div>
+            <br/>
+            
+            <h4><span style="background-color: #ffcc00">SPONSOR:</span> <%=singleData.sponsor.toUpperCase()%></h4>
+            <h4><span style="background-color: #ffcc00">COMMITTEE:</span> <%=singleData.committees.toUpperCase()%></h4>
+            <h4><span style="background-color: #ffcc00">PARTY:</span> <%=singleData.sponsor_party.toUpperCase()%></h4>
+            <h4><span style="background-color: #ffcc00">MOST RECENT ACTION DATE:</span> <%=singleData.latest_major_action_date%></h4>
+            <h4><span style="background-color: #ffcc00"># OF CO-SPONSORS:</span> <%=singleData.cosponsors%></h4>
+            
+            <br/>
+            <h4><span style="background-color: #ffcc00">SUMMARY:</span></h4>
+            <p><%=singleData.summary%></p>
+            
+            <br/>
+            <img src="https://media.giphy.com/media/PcR3c1PY4drB6/giphy.gif"/>
+            
+        </div>
+        <% } %>
+        
+        <% if (singleData === null) { %>
+          <% console.log('data: ' + data)%>
+          <div class="container billContent">
+            <h1><%= data.number && data.number%>: <%= data.title && data.title%></h1>
+            
+            <div id="rect"></div>
+            <br/>
+            
+            <h4><span style="background-color: #ffcc00">SPONSOR:</span> <%= data.sponsor && data.sponsor.toUpperCase()%></h4>
+            <h4><span style="background-color: #ffcc00">COMMITTEE:</span> <%= data.committees && data.committees.toUpperCase()%></h4>
+            <h4><span style="background-color: #ffcc00">PARTY:</span> <%= data.sponsor_party && data.sponsor_party.toUpperCase()%></h4>
+            <h4><span style="background-color: #ffcc00">MOST RECENT ACTION DATE:</span> <%=data.latest_major_action_date%></h4>
+            <h4><span style="background-color: #ffcc00"># OF CO-SPONSORS:</span> <%=data.cosponsors%></h4>
+            
+            <br/>
+            <h4><span style="background-color: #ffcc00">SUMMARY:</span></h4>
+            <p><%=data.summary%></p>
+            
+            <br/>
+            <img src="https://media.giphy.com/media/PcR3c1PY4drB6/giphy.gif"/>
+            
+        </div>
+        <% } else { %>     
+         
+          <h1>Uh oh</h1> 
+         
+        <% } %>
+        
+        
+        
+        
+        <!--<%= JSON.stringify(data, undefined, 2) %>-->
+        
+        
+        
+    </body>
+    
+</html>
