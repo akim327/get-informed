@@ -20,6 +20,9 @@
     font-family: 'Oswald', sans-serif;
 }
 
+.card-title {
+    center-align; 
+}
 .page-footer {
     padding-top: 60px;
 }
