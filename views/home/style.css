@@ -1,0 +1,42 @@
+/*.carousel-inner img {*/
+/*  width:1440px;*/
+/*  height:550px;*/
+/*}*/
+.carousel-inner{
+  min-width: 1060px !important;
+  max-height: 500px !important;
+}
+
+.carousel-inner .img-fluid{
+  min-width: 1060px !important;
+  max-height: 500px !important;
+  display: inline-block; 
+}
+.navbar {
+    margin-right: 2px;
+}
+.parallax-container { 
+    /* The image used */
+    background-image: url("http://www.gocollette.com/-/media/img/destination%20page/north%20america/north%20america%20continent/north%20america%20continent%20ms2.ashx?h=720&w=1280&la=en&hash=040572C9DAC2CA3C3F83F07E96D869C4A2D62FF6");
+
+    /* Set a specific height */
+    height: 400px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container h1 {
+    font-family: 'Shrikhand', cursive;
+}
+
+.container h5 {
+    font-family: 'Shrikhand', cursive;
+}
+
+.page-footer {
+    padding-top: 60px;
+}

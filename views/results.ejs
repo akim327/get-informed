@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>get those billz u kare about</title> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <link href = "css/style.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+        <!-- As a heading -->
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">get informed yo</a>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="#">Features</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link disabled" href="#">Disabled</a>
+                </div>
+            </div>
+        </nav>
+        
+        <br>
+        
+        <div class='container text-center' id="mainser" >
+            <h1>Get ur billlllllllllls</h1>
+            <form action="/bill" method="post">
+                <input name="search" id="search"/>
+                <button type="submit" class="btn btn-outline-info" onclick={getSearchBillz()}>get billz</button>
+            </form>
+        </div>
+        
+        <br/>
+
+        <div id="spinner" class="preloader-wrapper big active"></div>
+                
+        <div class="row">
+          <div id = "result" class="container">
+              <% bills.forEach(function(bill){ %>
+
+                <div class="card card-outline-info mb-3 text-center">
+                  
+                  <div class="card-block">
+                    <h3 class="card-title"><%= bill.title %></h3>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <form action="/single-bill" method="post">
+                        <input value="<%= bill.bill_uri %>" name="bill_uri" style="display: none; visibility: hidden !important" />
+                        <button class="btn btn-primary" type="submit">Get Info on Bill</button>
+                    </form>
+                  </div>
+                 
+                </div>
+                <br></br>
+                
+              <% }) %>
+          </div>
+        </div>
+        
+        <div>
+            
+        </div>
+        
+    </body>
+</html>
