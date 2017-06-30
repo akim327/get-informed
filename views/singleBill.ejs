@@ -13,7 +13,7 @@
     
     <body>
         <!--navbar-->
- <nav>
+      <nav>
           <div class="white black-text nav-wrapper ">
             <a href="/" class="black-text brand-logo" id="logo">get informed, yo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -63,14 +63,19 @@
             
             <h4><span style="background-color: #ffcc00">SPONSOR:</span> <%= data.sponsor && data.sponsor.toUpperCase()%></h4>
             <h4><span style="background-color: #ffcc00">COMMITTEE:</span> <%= data.committees && data.committees.toUpperCase()%></h4>
-            <h4><span style="background-color: #ffcc00">PARTY:</span> <%= data.sponsor_party && data.sponsor_party.toUpperCase()%></h4>
-            <h4><span style="background-color: #ffcc00">MOST RECENT ACTION DATE:</span> <%=data.latest_major_action_date%></h4>
-            <h4><span style="background-color: #ffcc00"># OF CO-SPONSORS:</span> <%=data.cosponsors%></h4>
+            <h4><span style="background-color: #ffcc00">SPONSOR PARTY:</span> <%= data.sponsor_party && data.sponsor_party.toUpperCase()%></h4>
+            <h4><span style="background-color: #ffcc00">SPONSOR STATE:</span> <%= data.sponsor_state && data.sponsor_state.toUpperCase()%></h4>
+            <h4><span style="background-color: #ffcc00">MOST RECENT ACTION DATE:</span> <%=data.latest_major_action_date && data.latest_major_action_date%></h4>
+            <h4><span style="background-color: #ffcc00"># OF CO-SPONSORS:</span> <%=data.cosponsors && data.cosponsors%></h4>
             
             <br/>
             <h4><span style="background-color: #ffcc00">SUMMARY:</span></h4>
-            <p><%=data.summary%></p>
+            <p style="font-size: 150%"><%=data.summary && data.summary%></p>
             
+            <br/>
+            <h4><span style="background-color: #ffcc00">FIND OUT MORE:</span> <a href="<%=data.govtrack_url && data.govtrack_url%>" target="_blank">GOVTRACK</a></h4>
+            
+            <br/>
             <br/>
             <img src="https://media.giphy.com/media/PcR3c1PY4drB6/giphy.gif"/>
             
