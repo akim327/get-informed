@@ -1,25 +1,6 @@
 function getSearchBillz(){
     
-    var spinnerDiv = document.getElementById("spinner")
-    spinnerDiv.innerHTML =  
-     `  
-        <div class="container" id="spinner">
-        	<div class="row">
-        		<div id="loader">
-            		<div class="dot"></div>
-        			<div class="dot"></div>
-        			<div class="dot"></div>
-        			<div class="dot"></div>
-        			<div class="dot"></div>
-        			<div class="dot"></div>
-        			<div class="dot"></div>
-        			<div class="dot"></div>
-        			<div class="lading"></div>
-        		</div>
-        	</div>
-        </div>
-      `
-      
+ 
     var str = document.getElementById("search").value;
     // var searchTerm = `q=${str.replace(" ","+")}&`;
     var endpoint =`https://api.propublica.org/congress/v1/bills/subjects/${str}.json`
@@ -74,9 +55,7 @@ function getSearchBillz(){
         
         var resultDiv = document.getElementById('result')
         resultDiv.innerHTML = finalHTML
-        
-        var spinnerDiv = document.getElementById('spinner')
-        spinnerDiv.innerHTML = ''
+  
     })
     
     .catch(err => console.log(err))

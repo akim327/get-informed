@@ -2,42 +2,60 @@
 <html>
     <head>
         <title>Find Your Reps</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      
         <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
         <link rel="stylesheet" href="/css/homeStyle.css">
+        
+        <style>
+          .flexStuff{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+          
+        </style>
+        
     </head>
-    <body>
+    <body style="height: 100%">
         <!--navbar-->
-        <nav>
+       <nav>
           <div class="white black-text nav-wrapper ">
-            <a href="home.ejs" class="black-text brand-logo">get informed, yo</a>
+            <a href="/" class="black-text brand-logo" id="logo">get informed, yo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a class="black-text" href="/">Home</a></li>
+              <li><a class="black-text" href="/mission">Mission</a></li>
               <li><a class="black-text" href="/get-billz">Find Billz</a></li>
-              <li><a class="black-text" href="/about">About Us</a></li>
               <li><a class="black-text" href="/getInvolved">Get Involved</a></li>
+              <li><a class="black-text" href="/findReps">Find Repz</a></li>
               <li><a class="black-text" href="/resources">Resources</a></li>
-              <li><a class="black-text" href="/findReps">Find Reps</a></li>
+              <li><a class="black-text" href="/about">About Us</a></li>
+
             </ul>
           </div>
-        </nav>   
+        </nav>
         <!--card-->
-          <div class="col-sm-6 mx-auto">
-            <div class="card">
-              <div class="card-block">
-                <h3 class="card-title">Connect With Your Reps</h3>
-                <p class="card-text">Find the women and men who represent you in the United States Congress.</p>
-                <a href="http://www.house.gov/representatives/find/" class="btn btn-outline-primary">Find Yo Repz</a>
-              </div>
-            </div>
-          </div>
+          <!--<div class="col-sm-6 mx-auto">-->
+          <!--  <div class="card">-->
+          <!--    <div class="card-block">-->
+          <!--      <h3 class="card-title">Connect With Your Reps</h3>-->
+          <!--      <p class="card-text">Find the women and men who represent you in the United States Congress.</p>-->
+          <!--      <a href="http://www.house.gov/representatives/find/" class="btn btn-outline-primary">Find Yo Repz</a>-->
+          <!--    </div>-->
+          <!--  </div>-->
+          <!--</div>-->
+          
+        <div class="container center-align flexStuff" style="height: 90vh">
+          <h1 style="font-size: 500%">CONNECT WITH YOUR REPS</h1>
+          <p>Find the women and men who represent you in the <span style="background-color: #ffcc00">United States Congress</span>.</p>
+          <br/>
+          <a target="_blank" href="http://www.house.gov/representatives/find/"><button type="submit" class="black btn btn-outline">find ur repz</button></a>
         </div>
     </body>
 </html>

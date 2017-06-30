@@ -14,33 +14,37 @@
     </head>
     <body>
         <!--navbar-->
-        <nav>
+         <nav>
           <div class="white black-text nav-wrapper ">
-            <a href="home.ejs" class="black-text brand-logo">get informed, yo</a>
+            <a href="/" class="black-text brand-logo" id="logo">get informed, yo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a class="black-text" href="/">Home</a></li>
+              <li><a class="black-text" href="/mission">Mission</a></li>
               <li><a class="black-text" href="/get-billz">Find Billz</a></li>
-              <li><a class="black-text" href="/about">About Us</a></li>
               <li><a class="black-text" href="/getInvolved">Get Involved</a></li>
+              <li><a class="black-text" href="/findReps">Find Repz</a></li>
               <li><a class="black-text" href="/resources">Resources</a></li>
-              <li><a class="black-text" href="/findReps">Find Reps</a></li>
+              <li><a class="black-text" href="/about">About Us</a></li>
+
             </ul>
           </div>
-        </nav>  
+        </nav>
+              
         
         <br>
         
         <div class='container center-align' id="mainser" >
             <h1>GET UR BILLZ</h1>
+            <h5>type in an issue you care about!</h5>
             <form action="/bill" method="post">
                 <input name="search" id="search"/>
-                <button type="submit" class="btn btn-outline-info" onclick={getSearchBillz()}>get billz</button>
+                <button type="submit" class="cyan lighten-3 btn btn-outline" onclick={getSearchBillz()}>get billz</button>
             </form>
         </div>
-        
-        <br/>
-
-        <div id="spinner" class="preloader-wrapper big active"></div>
+ 
+    <div class="preloader-wrapper big active" id="spinner"></div>
+    
+ 
                 
         <div class="row">
           <div id = "result" class="container"></div>

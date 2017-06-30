@@ -56,6 +56,18 @@ app.get('/get-billz', function(request,response){
     response.render('bill.ejs')
 })
 
+app.get('/about', function(request,response){
+    response.render('aboutUs.ejs')
+})
+
+app.get('/mission', function(request,response){
+    response.render('mission.ejs')
+})
+
+app.get('/resources', function(request,response){
+    response.render('resources.ejs')
+})
+
 app.get('/getInvolved', function(request, response){
     response.render('getInvolved.ejs');
 })

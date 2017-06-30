@@ -15,6 +15,20 @@
     background-size: cover;
 }
 
+.parallax-container2 { 
+    /* The image used */
+    background-image: url('../images/aboutus.png');
+
+    /* Set a specific height */
+    height: 400px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 .container h1, h2, h3, h4, h5, h6{
     font-family: 'Oswald', sans-serif;
@@ -23,8 +37,13 @@
 .card-title {
     center-align; 
 }
+
 .page-footer {
     padding-top: 60px;
+}
+
+.footer-icons {
+    display: inline;
 }
 
 .hero-title {
@@ -36,8 +55,22 @@
     width: 30%;
 }
 
+img{
+display:block;
+margin:auto;
+}
+
 #rect{
     width:180px;
     height:8px;
     background:#ffcc00;
+}
+
+#spinner {
+    margin-left: 48%;
+    margin-top: 10%;
+}
+
+#logo {
+    margin-left: 1%;
 }

@@ -13,19 +13,21 @@
     
     <body>
         <!--navbar-->
-        <nav>
+ <nav>
           <div class="white black-text nav-wrapper ">
-            <a href="home.ejs" class="black-text brand-logo">get informed, yo</a>
+            <a href="/" class="black-text brand-logo" id="logo">get informed, yo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a class="black-text" href="/">Home</a></li>
+              <li><a class="black-text" href="/mission">Mission</a></li>
               <li><a class="black-text" href="/get-billz">Find Billz</a></li>
-              <li><a class="black-text" href="/about">About Us</a></li>
               <li><a class="black-text" href="/getInvolved">Get Involved</a></li>
+              <li><a class="black-text" href="/findReps">Find Repz</a></li>
               <li><a class="black-text" href="/resources">Resources</a></li>
-              <li><a class="black-text" href="/findReps">Find Reps</a></li>
+              <li><a class="black-text" href="/about">About Us</a></li>
+
             </ul>
           </div>
-        </nav>  
+        </nav>
         
         <% if (data === null) { %>
           <% console.log('singleData:' + singleData)%>
